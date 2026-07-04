@@ -1,0 +1,110 @@
+v4l2-ctl -d /dev/bresser --list-ctrls
+
+v4l2-ctl -d /dev/bresser --list-ctrls-menus
+
+MANUAL
+v4l2-ctl -d /dev/bresser --set-ctrl=auto_exposure=1
+v4l2-ctl -d /dev/bresser --set-ctrl=exposure_time_absolute=200
+
+APERTURE PRIORITY
+v4l2-ctl -d /dev/bresser --set-ctrl=auto_exposure=3
+
+v4l2-ctl -d /dev/bresser --set-ctrl=auto_exposure=1
+v4l2-ctl -d /dev/bresser --set-ctrl=exposure_time_absolute=700
+v4l2-ctl -d /dev/bresser --set-ctrl=contrast=19
+v4l2-ctl -d /dev/bresser --set-ctrl=gamma=100
+v4l2-ctl -d /dev/bresser --set-ctrl=brightness=0
+v4l2-ctl -d /dev/bresser --set-ctrl=saturation=64
+v4l2-ctl -d /dev/bresser --set-ctrl=sharpness=10
+
+
+guvcview -d /dev/bresser
+
+
+devlin@lw232451585:~$ v4l2-ctl -d /dev/bresser --list-ctrls
+
+v4l2-ctl -d /dev/bresser --list-ctrls-menus
+
+User Controls
+
+                     brightness 0x00980900 (int)    : min=-127 max=128 step=1 default=0 value=34
+                       contrast 0x00980901 (int)    : min=0 max=30 step=1 default=19 value=6
+                     saturation 0x00980902 (int)    : min=0 max=127 step=1 default=64 value=53
+                            hue 0x00980903 (int)    : min=-180 max=180 step=1 default=0 value=180
+                          gamma 0x00980910 (int)    : min=20 max=250 step=1 default=100 value=116
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=1 (50 Hz)
+                      sharpness 0x0098091b (int)    : min=0 max=60 step=1 default=10 value=13
+         backlight_compensation 0x0098091c (int)    : min=0 max=2 step=1 default=0 value=0
+
+Camera Controls
+
+                  auto_exposure 0x009a0901 (menu)   : min=0 max=3 default=3 value=1 (Manual Mode)
+         exposure_time_absolute 0x009a0902 (int)    : min=78 max=738 step=1 default=312 value=701
+
+User Controls
+
+                     brightness 0x00980900 (int)    : min=-127 max=128 step=1 default=0 value=34
+                       contrast 0x00980901 (int)    : min=0 max=30 step=1 default=19 value=6
+                     saturation 0x00980902 (int)    : min=0 max=127 step=1 default=64 value=53
+                            hue 0x00980903 (int)    : min=-180 max=180 step=1 default=0 value=180
+                          gamma 0x00980910 (int)    : min=20 max=250 step=1 default=100 value=116
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=1 (50 Hz)
+				0: Disabled
+				1: 50 Hz
+				2: 60 Hz
+                      sharpness 0x0098091b (int)    : min=0 max=60 step=1 default=10 value=13
+         backlight_compensation 0x0098091c (int)    : min=0 max=2 step=1 default=0 value=0
+
+Camera Controls
+
+                  auto_exposure 0x009a0901 (menu)   : min=0 max=3 default=3 value=1 (Manual Mode)
+				1: Manual Mode
+				3: Aperture Priority Mode
+         exposure_time_absolute 0x009a0902 (int)    : min=78 max=738 step=1 default=312 value=701
+         
+         
+EKOS ##########################
+
+devlin@lw232451585:~$ v4l2-ctl -d /dev/bresser --list-ctrls
+
+User Controls
+
+                     brightness 0x00980900 (int)    : min=-127 max=128 step=1 default=0 value=34
+                       contrast 0x00980901 (int)    : min=0 max=30 step=1 default=19 value=6
+                     saturation 0x00980902 (int)    : min=0 max=127 step=1 default=64 value=53
+                            hue 0x00980903 (int)    : min=-180 max=180 step=1 default=0 value=180
+                          gamma 0x00980910 (int)    : min=20 max=250 step=1 default=100 value=116
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=1 (50 Hz)
+                      sharpness 0x0098091b (int)    : min=0 max=60 step=1 default=10 value=13
+         backlight_compensation 0x0098091c (int)    : min=0 max=2 step=1 default=0 value=0
+
+Camera Controls
+
+                  auto_exposure 0x009a0901 (menu)   : min=0 max=3 default=3 value=1 (Manual Mode)
+         exposure_time_absolute 0x009a0902 (int)    : min=78 max=738 step=1 default=312 value=100
+devlin@lw232451585:~$ v4l2-ctl -d /dev/bresser --list-ctrls-menus
+
+User Controls
+
+                     brightness 0x00980900 (int)    : min=-127 max=128 step=1 default=0 value=34
+                       contrast 0x00980901 (int)    : min=0 max=30 step=1 default=19 value=6
+                     saturation 0x00980902 (int)    : min=0 max=127 step=1 default=64 value=53
+                            hue 0x00980903 (int)    : min=-180 max=180 step=1 default=0 value=180
+                          gamma 0x00980910 (int)    : min=20 max=250 step=1 default=100 value=116
+           power_line_frequency 0x00980918 (menu)   : min=0 max=2 default=1 value=1 (50 Hz)
+				0: Disabled
+				1: 50 Hz
+				2: 60 Hz
+                      sharpness 0x0098091b (int)    : min=0 max=60 step=1 default=10 value=13
+         backlight_compensation 0x0098091c (int)    : min=0 max=2 step=1 default=0 value=0
+
+Camera Controls
+
+                  auto_exposure 0x009a0901 (menu)   : min=0 max=3 default=3 value=1 (Manual Mode)
+				1: Manual Mode
+				3: Aperture Priority Mode
+         exposure_time_absolute 0x009a0902 (int)    : min=78 max=738 step=1 default=312 value=100
+devlin@lw232451585:~$ 
+devlin@lw232451585:~$ 
+
+

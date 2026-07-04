@@ -107,9 +107,10 @@ Camera Controls
 devlin@lw232451585:~$ 
 devlin@lw232451585:~$ 
 
+git pull
 git status
 git add .
-git commit -m "Add Python camera control utility"
+git commit -m "Describe your changes"
 git push
 
 

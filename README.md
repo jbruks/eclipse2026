@@ -1,6 +1,6 @@
 # Eclipse 2026
 
-This repository contains all the work related to our observation of the **2026 Total Solar Eclipse** and the **2026 Lunar Eclipse**, both of which will be observed from **Mora de Rubielos (Teruel, Spain)**.
+This repository contains all the work related to our observation of the **2026 Total Solar Eclipse** which will be observed from **Mora de Rubielos (Teruel, Spain)**.
 
 ## Project Goals
 
